@@ -36,6 +36,25 @@
         box-sizing: border-box;
       }
 
+
+/* Navbar height variable */
+    :root {
+  --navbar-height: 90px;
+}
+
+/* Push hero below navbar */
+.hero {
+  padding-top: var(--navbar-height);
+}
+
+/* Mobile navbar height override */
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 120px;
+  }
+}
+      
       :root {
         --primary-color: #00f5ff;
         --secondary-color: #0099ff;
@@ -812,7 +831,8 @@
         z-index: 1000;
         backdrop-filter: var(--blur-bg);
       }
-
+      
+/* 
       .scroll-top.visible {
         opacity: 1;
         visibility: visible;
@@ -823,7 +843,7 @@
         border-color: var(--primary-color);
         transform: translateY(-5px);
         box-shadow: var(--shadow-primary);
-      }
+      } */
 
       /* Loading Animation */
       .loading {
