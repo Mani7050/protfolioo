@@ -269,17 +269,35 @@
         z-index: 2;
       }
 
-      .hero-content h1 {
-        font-size: clamp(3rem, 6vw, 5rem);
-        font-weight: 800;
-        margin-bottom: 1.5rem;
-        background: var(--gradient-tertiary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        letter-spacing: -0.03em;
-        line-height: 1.1;
-      }
+     .hero-content h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+
+  /* Smoothened gradient */
+  background: linear-gradient(
+    120deg,
+    rgba(0, 245, 255, 0.95),
+    rgba(0, 153, 255, 0.95) 40%,
+    rgba(255, 0, 128, 0.95)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Smooth letter rendering */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 2px 12px rgba(0, 245, 255, 0.25));
+  transition: all 0.4s ease;
+}
 
       .hero-subtitle {
         font-size: clamp(1.2rem, 2.5vw, 1.5rem);
